@@ -4,12 +4,13 @@
     bottom: 0;
     width: 100%;
     height: var(--navigationHeight);
-    background-color: green;
+    background-color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &__button {
         margin: 1rem;
+        cursor: pointer;
     }
 }

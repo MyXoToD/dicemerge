@@ -7,7 +7,7 @@ export class Screen {
 
         this.buttons.forEach(button => {
             button.addEventListener('click', e => {
-                let screenId = e.target.getAttribute('data-goto-screen');
+                let screenId = e.currentTarget.getAttribute('data-goto-screen');
                 this.switchScreen(screenId);
             });
         });

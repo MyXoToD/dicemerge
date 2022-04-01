@@ -6,7 +6,8 @@ const browsersync = require('browser-sync').create();
 
 const paths = {
     scss: 'assets/stylesheets/scss/',
-    css: 'assets/stylesheets/'
+    css: 'assets/stylesheets/',
+    js: 'assets/javascripts/'
 }
 
 function scssTask() {
