@@ -1,0 +1,28 @@
+{
+  "name": "dicemerge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyXoToD/dicemerge.git"
+  },
+  "author": "Max Boll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MyXoToD/dicemerge/issues"
+  },
+  "homepage": "https://github.com/MyXoToD/dicemerge#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "cssnano": "^5.1.7",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.10"
+  }
+}

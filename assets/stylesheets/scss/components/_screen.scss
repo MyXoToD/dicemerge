@@ -1,0 +1,17 @@
+.screen {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--topbarHeight);
+    bottom: var(--navigationHeight);
+    width: 100%;
+    height: calc(100vh - var(--topbarHeight) - var(--navigationHeight));
+    background-color: #ccc;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &--active {
+        display: flex;
+    }
+}
