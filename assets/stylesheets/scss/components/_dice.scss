@@ -1,4 +1,5 @@
 .dice {
+    position: relative;
     display: grid;
     place-items: center;
     border-radius: 10px;
@@ -7,6 +8,18 @@
     aspect-ratio: 1/1;
     color: #000;
     box-shadow: 0 0 10px rgba(#000, .5);
+    cursor: pointer;
+    user-select: none;
+
+    &:before {
+        content: attr(data-rolled);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        color: red;
+        opacity: 1;
+        transform: translate(-50%, -0%);
+    }
 
     @media screen and (max-width: 900px) {
         width: 10vw;
@@ -20,7 +33,34 @@
         position: fixed;
         top: var(--y);
         left: var(--x);
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(1.1);
         z-index: 100;
+
+        &.dice--rolled {
+            transform: translate(-50%, -50%) scale(1.1) rotate(-5deg);
+            animation: wiggleDragging 50ms linear infinite alternate;
+        }
+    }
+
+    &--rolled {
+        transform: rotate(-5deg);
+        animation: wiggle 50ms linear infinite alternate;
+
+        &:before {
+            transition: all .3s linear;
+            transform: translate(-50%, -200%);
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes wiggle {
+    to {
+        transform: rotate(5deg);
+    }
+}
+@keyframes wiggleDragging {
+    to {
+        transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
     }
 }
